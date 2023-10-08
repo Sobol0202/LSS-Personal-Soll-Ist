@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LSS Personal Soll-Ist
 // @namespace    www.leitstellenspiel.de
-// @version      1.0
+// @version      1.1
 // @description  Fügt Personalverwaltungsfunktionen hinzu
 // @author       MissSobol
 // @match        https://www.leitstellenspiel.de/buildings/*
@@ -119,7 +119,7 @@
                 `;
 
                 // Überprüfen, ob der PersonalCount größer als das Ist Personal ist
-                if (personalData[buildingId] > buildingInfo.personal_count) {
+                if (personalData[buildingId] < buildingInfo.personal_count) {
                     row.style.backgroundColor = 'green'; // Hintergrundfarbe grün setzen
                 }
 
